@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Enciclopedia de Minecraft</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Enciclopedia de Minecraft</h1>
+        <p>Panel de administrador</p>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <main>
+        <section class="busqueda">
+            <h2>Explorar Minecraft</h2>
+
+            <select id="categoria">
+                <option value="mobs">Criaturas</option>
+                <option value="biomes">Biomas</option>
+                <option value="items">Objetos</option>
+                <option value="enchantments">Encantamientos</option>
+            </select>
+
+            <input type="text" id="buscar"
+                placeholder="Buscar por nombre...">
+
+            <button id="btnBuscar">Buscar</button>
+        </section>
+
+        <section>
+            <h2>Resultados</h2>
+            <div id="resultados" class="contenedor"></div>
+        </section>
+
+        <section class="busqueda">
+            <h2>Administrar recomendaciones</h2>
+
+            <input type="text" id="nombreRecomendacion"
+                placeholder="Nombre del elemento">
+
+            <input type="text" id="descripcionRecomendacion"
+                placeholder="Descripción">
+
+            <button id="btnAgregar">Agregar recomendación</button>
+
+            <div id="listaRecomendaciones" class="contenedor"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://api.astroworldmc.com" target="_blank">
+            Powered by Astroworld API
+        </a>
+    </footer>
+
+    <script src="js/usuarios.js"></script>
+    <script>
+        verificarSesion('Administrador');
+    </script>
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
